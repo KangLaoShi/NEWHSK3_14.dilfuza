@@ -281,16 +281,16 @@
                 <div className="flex flex-col items-center max-w-2xl mx-auto space-y-6">
                     <div className="text-gray-300 font-medium">Lug'at {currentIndex + 1} / {vocabData.length}</div>
                     
-                    <div className={`flip-card cursor-pointer ${flipped ? 'flipped' : ''}`} onClick={() => setFlipped(!flipped)}>
+                    <div className={`flip-card cursor-pointer w-full max-w-lg mx-auto ${flipped ? 'flipped' : ''}`} onClick={() => setFlipped(!flipped)}>
                         <div className="flip-card-inner">
                             {/* Front */}
-                            <div className="flip-card-front glass-panel relative">
+                            <div className="flip-card-front glass-panel">
                                 <TextToSpeech text={card.hanzi} className="absolute top-6 right-6 text-2xl text-gray-400" />
                                 <h2 className="text-7xl font-bold mb-4 text-white">{card.hanzi}</h2>
                             </div>
                             
                             {/* Back */}
-                            <div className="flip-card-back glass-panel relative">
+                            <div className="flip-card-back glass-panel">
                                 <TextToSpeech text={card.hanzi} className="absolute top-6 right-6 text-2xl text-gray-400" />
                                 <h2 className="text-5xl font-bold mb-2 text-white">{card.hanzi}</h2>
                                 <p className="text-3xl text-indigo-300 mb-6">{card.pinyin}</p>
